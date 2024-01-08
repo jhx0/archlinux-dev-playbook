@@ -17,7 +17,5 @@
       import_tasks: tasks/handlers.yml
 
   tasks:
-    - name: Distribution
-      debug: msg="{{ ansible_distribution }}"
     - import_tasks: tasks/main.yml
       when: ansible_distribution == 'Archlinux'
