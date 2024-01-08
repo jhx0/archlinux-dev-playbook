@@ -1,4 +1,4 @@
-# arch-dev-playbook
+# archlinux-dev-playbook
 A **Ansible** **Playbook** to deploy/configure a **ArchLinux** development system.   
 The primary focus is a system running under **VirtualBox** - but you could certainly change that!
 
