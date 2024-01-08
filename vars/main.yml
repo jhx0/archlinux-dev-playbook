@@ -1,0 +1,13 @@
+---
+ansible_become_flags: "-"
+
+ssh_port: 22
+
+user_name: x
+user_group_name: x
+
+fail2ban_sshd_port: 22
+
+ntp_servers: 0.de.pool.ntp.org 1.de.pool.ntp.org 2.de.pool.ntp.org
+
+vbox: true

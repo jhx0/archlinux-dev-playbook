@@ -1,0 +1,52 @@
+---
+- import_tasks: tasks/pacman.yml
+  tags: pacman
+
+- import_tasks: tasks/upgrade.yml
+  tags: upgrade
+
+- import_tasks: tasks/dotfiles.yml
+  tags: dotfiles
+
+- import_tasks: tasks/sshd.yml
+  tags: sshd
+
+- import_tasks: tasks/sudo.yml
+  tags: sudo
+
+- import_tasks: tasks/ntp.yml
+  tags: ntp
+
+- import_tasks: tasks/sysctl.yml
+  tags: sysctl
+
+- import_tasks: tasks/grub.yml
+  tags: grub
+
+- import_tasks: tasks/fail2ban.yml
+  tags: fail2ban
+
+- import_tasks: tasks/xorg.yml
+  tags: xorg
+
+- import_tasks: tasks/vbox.yml
+  tags: vbox
+  when: vbox
+
+- import_tasks: tasks/desktop.yml
+  tags: desktop
+
+- import_tasks: tasks/packages.yml
+  tags: packages
+
+- import_tasks: tasks/development.yml
+  tags: development
+
+- import_tasks: tasks/groups.yml
+  tags: groups
+
+- import_tasks: tasks/fontconfig.yml
+  tags: fontconfig
+
+- import_tasks: tasks/reboot.yml
+  tags: reboot

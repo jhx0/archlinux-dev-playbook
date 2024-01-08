@@ -1,0 +1,22 @@
+---
+- name: update pacman cache
+  community.general.pacman:
+    update_cache: true
+
+- name: restart sshd
+  systemd:
+    name: sshd
+    state: restarted
+
+- name: restart systemd-timesyncd
+  systemd:
+    name: systemd-timesyncd
+    state: restarted
+
+- name: update grub
+  shell: grub-mkconfig -o /boot/grub/grub.cfg
+
+- name: restarting fail2ban
+  systemd:
+    name: fail2ban
+    state: restarted

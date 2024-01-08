@@ -1,0 +1,14 @@
+---
+- name: Adding custom mirrorlist
+  template: 
+    src: pacman/mirrorlist.j2
+    dest: /etc/pacman.d/mirrorlist
+
+- name: Adding custom pacman.conf
+  template: 
+    src: pacman/pacman.conf.j2 
+    dest: /etc/pacman.conf
+  notify: update pacman cache
+  
+- name: Updating system
+  meta: flush_handlers

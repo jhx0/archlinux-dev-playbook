@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: true
+  become_user: root
+  become_method: su
+
+  vars_files:
+    - vars/main.yml
+    - vars/pacman.yml
+    - vars/xorg.yml
+    - vars/desktop.yml
+    - vars/packages.yml
+    - vars/development.yml
+
+  handlers:
+    - name: Include handlers
+      import_tasks: tasks/handlers.yml
+
+  tasks:
+    - name: Distribution
+      debug: msg="{{ ansible_distribution }}"
+    - import_tasks: tasks/main.yml
+      when: ansible_distribution == 'Archlinux'

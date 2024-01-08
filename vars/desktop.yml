@@ -1,0 +1,15 @@
+---
+desktop_packages:
+  - xfce4
+  - xfce4-goodies
+  - pipewire-alsa
+  - pipewire-pulse
+  - pipewire-jack
+  - wireplumber
+  - noto-fonts
+  - noto-fonts-emoji
+  - noto-fonts-cjk
+  - ttf-liberation
+  - lightdm
+  - lightdm-gtk-greeter
+  - lightdm-gtk-greeter-settings

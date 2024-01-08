@@ -1,0 +1,2 @@
+mirror: https://mirror.netcologne.de/archlinux/$repo/os/$arch
+parallel_downloads: 5

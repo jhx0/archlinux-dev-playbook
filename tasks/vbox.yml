@@ -1,0 +1,11 @@
+---
+- name: Installing VBox Guest related packages
+  community.general.pacman:
+    name: "{{ vbox_packages }}"
+    state: present
+
+- name: Enable VBox Guest service
+  ansible.builtin.systemd_service:
+    name: vboxservice
+    enabled: true
+    masked: no

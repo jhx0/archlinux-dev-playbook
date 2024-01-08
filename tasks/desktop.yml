@@ -1,0 +1,11 @@
+---
+- name: Installing Desktop related packages (Xfce)
+  community.general.pacman:
+    name: "{{ desktop_packages }}"
+    state: present
+
+- name: Enable LightDM
+  ansible.builtin.systemd_service:
+    name: lightdm
+    enabled: true
+    masked: no

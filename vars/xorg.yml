@@ -1,0 +1,9 @@
+---
+xorg_packages:
+  - xorg
+  - ttf-dejavu
+  - xterm
+  - xf86-video-vesa
+  - xf86-input-libinput
+  - mesa
+  - mesa-utils

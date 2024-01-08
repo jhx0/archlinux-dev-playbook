@@ -1,0 +1,5 @@
+---
+development_packages:
+  - go
+  - mingw-w64
+  - base-devel

@@ -1,0 +1,5 @@
+---
+- name: Installing Xorg
+  community.general.pacman:
+    name: "{{ xorg_packages }}"
+    state: present

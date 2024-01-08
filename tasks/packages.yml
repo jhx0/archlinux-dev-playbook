@@ -1,0 +1,5 @@
+---
+- name: Installing software
+  community.general.pacman:
+    name: "{{ software_packages }}"
+    state: present
