@@ -1,5 +1,0 @@
----
-- name: Installing Xfce
-  community.general.pacman:
-    name: "{{ xfce_packages }}"
-    state: present
