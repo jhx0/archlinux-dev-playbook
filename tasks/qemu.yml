@@ -1,0 +1,11 @@
+---
+- name: Installing QEMU guest utils
+  community.general.pacman:
+    name: "{{ qemu_packages }}"
+    state: present
+
+- name: Enabling QEMU guest service
+  ansible.builtin.systemd_service:
+    name: qemu-guest-agent
+    enabled: true
+    masked: no

@@ -33,6 +33,10 @@
   tags: vbox
   when: vbox
 
+- import_tasks: tasks/qemu.yml
+  tags: qemu
+  when: qemu
+
 - import_tasks: tasks/desktop.yml
   tags: desktop
 

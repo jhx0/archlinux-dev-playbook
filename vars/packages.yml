@@ -6,3 +6,6 @@ software_packages:
 vbox_packages:
   - xf86-video-vmware
   - virtualbox-guest-utils
+
+qemu_packages:
+  - qemu-guest-agent
