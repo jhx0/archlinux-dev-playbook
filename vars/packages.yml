@@ -2,6 +2,29 @@
 software_packages:
   - htop
   - nethogs
+  - rsync
+  - wget
+  - curl
+  - bc
+  - git
+  - tcpdump
+  - dmidecode
+  - whois
+  - lsof
+  - tmux
+  - pwgen
+  - bash-completion
+  - ethtool
+  - ncdu
+  - tree
+  - ipcalc
+  - stress
+  - iotop
+  - sshfs
+  - cifs-utils
+  - nfs-utils
+  - ntfs-3g
+  - dosfstools
 
 vbox_packages:
   - xf86-video-vmware

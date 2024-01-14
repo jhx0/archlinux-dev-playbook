@@ -3,3 +3,7 @@ development_packages:
   - go
   - mingw-w64
   - base-devel
+  - git
+  - strace
+  - ansible
+  - sshpass
