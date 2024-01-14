@@ -9,6 +9,8 @@ The primary focus is a system running under **VirtualBox** - but you could certa
 - **VirtualBox** Guest Utilities installed/enabled
 - Various **Sysctl** tweaks (Swappiness altered for example)
 - **Dotfiles** already present
+- **AUR** helper available: **Yay**
+- **VSCodium** installed from the **AUR**
 
 ## Hint
 This Playbook mainly servers my own needs - feel free to adapt it to yours!
@@ -65,6 +67,8 @@ desktop
 packages
 development
 fontconfig
+yay
+aur
 reboot
 ```
 

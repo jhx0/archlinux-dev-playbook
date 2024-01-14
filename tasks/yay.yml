@@ -1,0 +1,24 @@
+---
+- name: Installing Git
+  community.general.pacman:
+    name: git
+    state: present
+
+- name: Cloning Yay
+  ansible.builtin.git:
+    repo: https://aur.archlinux.org/yay-bin.git
+    dest: /tmp/yay
+    clone: yes
+    update: yes
+  become: yes
+  become_user: "{{ user_name }}"
+
+- name: Installing Yay
+  shell: cd /tmp/yay && makepkg -misc --noconfirm
+  become: yes
+  become_user: "{{ user_name }}"
+
+- name: Cleanup
+  ansible.builtin.file:
+    path: /tmp/yay
+    state: absent

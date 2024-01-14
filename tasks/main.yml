@@ -48,5 +48,11 @@
 - import_tasks: tasks/fontconfig.yml
   tags: fontconfig
 
+- import_tasks: tasks/yay.yml
+  tags: yay
+
+- import_tasks: tasks/aur.yml
+  tags: aur
+
 - import_tasks: tasks/reboot.yml
   tags: reboot
