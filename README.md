@@ -2,6 +2,8 @@
 A **Ansible** **Playbook** to deploy/configure a **ArchLinux** development system.   
 The primary focus is a system running under **VirtualBox** - but you could certainly change that!
 
+![arch-desktop](https://github.com/jhx0/archlinux-dev-playbook/assets/37046652/c65a9cfe-3b89-406f-b172-1e40e725458c)
+
 ## Features:
 - Installs a basic **Xfce** desktop (With Xfce4-Goodies)
 - **LightDM** is used as a login manager
