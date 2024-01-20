@@ -25,6 +25,7 @@ software_packages:
   - nfs-utils
   - ntfs-3g
   - dosfstools
+  - os-prober
 
 vbox_packages:
   - xf86-video-vmware
