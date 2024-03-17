@@ -26,6 +26,7 @@ software_packages:
   - ntfs-3g
   - dosfstools
   - os-prober
+  - firefox
 
 vbox_packages:
   - xf86-video-vmware

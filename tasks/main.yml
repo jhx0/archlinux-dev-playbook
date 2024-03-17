@@ -22,6 +22,7 @@
 
 - import_tasks: tasks/grub.yml
   tags: grub
+  when: grub
 
 - import_tasks: tasks/fail2ban.yml
   tags: fail2ban
