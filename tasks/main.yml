@@ -53,6 +53,9 @@
 - import_tasks: tasks/fontconfig.yml
   tags: fontconfig
 
+- import_tasks: tasks/chaotic.yml
+  tags: chaotic
+
 - import_tasks: tasks/yay.yml
   tags: yay
 

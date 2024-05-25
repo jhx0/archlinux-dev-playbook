@@ -12,6 +12,7 @@ The primary focus is a system running under **VirtualBox** - but you could certa
 - Various **Sysctl** tweaks (Swappiness altered for example)
 - **Dotfiles** already present
 - **AUR** helper available: **Yay**
+- **Chaotic AUR** repository enabled
 - **VSCodium** installed from the **AUR**
 
 ## Hint
@@ -71,6 +72,7 @@ development
 fontconfig
 yay
 aur
+chaotic
 reboot
 ```
 

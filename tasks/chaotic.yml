@@ -1,0 +1,42 @@
+---
+- name: Importing Chaotic AUR key
+  community.general.pacman_key:
+    id: EF925EA60F33D0CB85C44AD13056513887B78AEB
+    keyserver: keyserver.ubuntu.com
+
+- name: Download Chaotic AUR keyring package
+  ansible.builtin.get_url:
+    url: 'https://cf-builds.garudalinux.org/repos/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+    dest: /tmp/chaotic-keyring.tar.zst
+    mode: '0440'
+
+- name: Download Chaotic AUR mirrorlist package
+  ansible.builtin.get_url:
+    url: 'https://cf-builds.garudalinux.org/repos/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+    dest: /tmp/chaotic-mirrorlist.tar.zst
+    mode: '0440'
+
+- name: Install package foo from repo and bar from file
+  community.general.pacman:
+    name:
+      - /tmp/chaotic-keyring.tar.zst
+      - /tmp/chaotic-mirrorlist.tar.zst
+    state: present
+
+- name: Removing local Chaotic packages
+  ansible.builtin.file:
+    path:
+      - /tmp/chaotic-keyring.tar.zst
+      - /tmp/chaotic-mirrorlist.tar.zst
+    state: absent
+
+- name: Adding Chaotic package repository
+  ansible.builtin.blockinfile:
+    path: /etc/pacman.conf
+    block: |
+      [chaotic-aur]
+      Include = /etc/pacman.d/chaotic-mirrorlist
+  notify: update pacman cache
+  
+- name: Updating Pacman cache
+  meta: flush_handlers
