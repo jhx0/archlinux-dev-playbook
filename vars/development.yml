@@ -7,3 +7,10 @@ development_packages:
   - strace
   - ansible
   - sshpass
+  - python
+  - python-pipx
+  - python-pip
+  - clang
+  - tcc
+  - ccache
+  - gdb

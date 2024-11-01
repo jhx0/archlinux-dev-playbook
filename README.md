@@ -5,18 +5,20 @@ The primary focus is a system running under **VirtualBox** - but you could certa
 ![arch-desktop](https://github.com/jhx0/archlinux-dev-playbook/assets/37046652/c65a9cfe-3b89-406f-b172-1e40e725458c)
 
 ## Features:
-- Installs a basic **Xfce** desktop (With Xfce4-Goodies)
+- Installs a basic **Xfce** desktop (With **Xfce4-Goodies**)
 - **LightDM** is used as a login manager
 - **Development** related tools installed (**Go**, **MingW**, **GCC**, etc.)
 - **VirtualBox** Guest Utilities installed/enabled
 - Various **Sysctl** tweaks (Swappiness altered for example)
-- **Dotfiles** already present
+- **Dotfiles** already present (**Personal Dotfiles**)
 - **AUR** helper available: **Yay**
 - **Chaotic AUR** repository enabled
-- **VSCodium** installed from the **AUR**
+- **VS Code** installed from the **AUR**
+- **Grub** config tweaks. (Playbook assumes **Grub** to be used by default)
+- Additional **Linux Kernels** installed (**LTS**, **Hardened**)
 
 ## Hint
-This Playbook mainly servers my own needs - feel free to adapt it to yours!
+This Playbook mainly servers **my own needs** - feel free to **adapt it to yours**!
 
 You can find many more variables under the **vars** directory - Make sure you take a look before running the **Playbook**. (So you can customize your install)
 
@@ -73,6 +75,7 @@ fontconfig
 yay
 aur
 chaotic
+kernel
 reboot
 ```
 

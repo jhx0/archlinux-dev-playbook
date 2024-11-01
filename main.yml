@@ -11,6 +11,7 @@
     - vars/desktop.yml
     - vars/packages.yml
     - vars/development.yml
+    - vars/kernel.yml
 
   handlers:
     - name: Include handlers

@@ -1,22 +1,16 @@
 ---
-- name: Importing Chaotic AUR key
-  community.general.pacman_key:
-    id: EF925EA60F33D0CB85C44AD13056513887B78AEB
-    keyserver: keyserver.ubuntu.com
+- name: Installing curl
+  community.general.pacman:
+    name: curl
+    state: present
 
 - name: Download Chaotic AUR keyring package
-  ansible.builtin.get_url:
-    url: 'https://cf-builds.garudalinux.org/repos/chaotic-aur/chaotic-keyring.pkg.tar.zst'
-    dest: /tmp/chaotic-keyring.tar.zst
-    mode: '0440'
+  shell: curl 'https://cf-builds.garudalinux.org/repos/chaotic-aur/chaotic-keyring.pkg.tar.zst' -o /tmp/chaotic-keyring.tar.zst
 
 - name: Download Chaotic AUR mirrorlist package
-  ansible.builtin.get_url:
-    url: 'https://cf-builds.garudalinux.org/repos/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-    dest: /tmp/chaotic-mirrorlist.tar.zst
-    mode: '0440'
+  shell: curl 'https://cf-builds.garudalinux.org/repos/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' -o /tmp/chaotic-mirrorlist.tar.zst
 
-- name: Install package foo from repo and bar from file
+- name: Installing Chaotic AUR Keyring packages
   community.general.pacman:
     name:
       - /tmp/chaotic-keyring.tar.zst

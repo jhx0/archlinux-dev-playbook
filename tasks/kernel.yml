@@ -1,0 +1,9 @@
+---
+- name: Installing additional Linux Kernel packages
+  community.general.pacman:
+    name: "{{ kernel_packages }}"
+    state: present
+  notify: update grub
+
+- name: Update GRUB
+  meta: flush_handlers

@@ -9,7 +9,10 @@ desktop_packages:
   - noto-fonts
   - noto-fonts-emoji
   - noto-fonts-cjk
+  - noto-fonts-extra
   - ttf-liberation
+  - ttf-dejavu
+  - ttf-hack-nerd
   - lightdm
   - lightdm-gtk-greeter
   - lightdm-gtk-greeter-settings

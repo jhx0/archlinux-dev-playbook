@@ -4,6 +4,6 @@
     path: /bin/yay
   register: yay_result
 
-- name: Installing VSCodium
-  shell: yes | LANG=C yay -Syy vscodium-bin
+- name: Installing VS Code
+  shell: yes | LANG=C yay -Syy visual-studio-code-bin
   when: yay_result.stat.exists

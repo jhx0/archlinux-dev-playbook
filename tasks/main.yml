@@ -62,5 +62,9 @@
 - import_tasks: tasks/aur.yml
   tags: aur
 
+- import_tasks: tasks/kernel.yml
+  tags: kernel
+
 - import_tasks: tasks/reboot.yml
   tags: reboot
+  when: reboot

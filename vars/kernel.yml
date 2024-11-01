@@ -1,0 +1,4 @@
+---
+kernel_packages:
+  - linux-lts
+  - linux-hardened
