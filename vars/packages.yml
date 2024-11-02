@@ -27,6 +27,8 @@ software_packages:
   - dosfstools
   - os-prober
   - firefox
+  - vim
+  - nano
 
 vbox_packages:
   - xf86-video-vmware
