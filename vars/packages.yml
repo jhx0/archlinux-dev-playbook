@@ -29,9 +29,15 @@ software_packages:
   - firefox
   - vim
   - nano
+  - fish
+  - neovim
+  - strace
+  - lsd
+  - unzip
+  - unrar
+  - nmap
 
 vbox_packages:
-  - xf86-video-vmware
   - virtualbox-guest-utils
 
 qemu_packages:

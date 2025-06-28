@@ -14,3 +14,4 @@ development_packages:
   - tcc
   - ccache
   - gdb
+  - docker

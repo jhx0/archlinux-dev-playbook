@@ -16,3 +16,10 @@ desktop_packages:
   - lightdm
   - lightdm-gtk-greeter
   - lightdm-gtk-greeter-settings
+  - thunar-archive-plugin 
+  - accountsservice
+  - xarchiver
+  - ffmpegthumbnailer 
+  - poppler-glib
+  - xfce4-screensaver
+  - gvfs
