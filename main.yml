@@ -12,6 +12,7 @@
     - vars/packages.yml
     - vars/development.yml
     - vars/kernel.yml
+    - vars/aur.yml
 
   handlers:
     - name: Include handlers

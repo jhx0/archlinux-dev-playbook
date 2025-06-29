@@ -1,9 +1,5 @@
 ---
-- name: Check that Yay is available
-  stat:
-    path: /bin/yay
-  register: yay_result
-
-- name: Installing VSCodium
-  shell: yes | LANG=C yay -Syy vscodium-bin
-  when: yay_result.stat.exists
+- name: Installing AUR packages (Chaotic)
+  community.general.pacman:
+    name: "{{ aur_packages }}"
+    state: present
