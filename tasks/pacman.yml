@@ -12,3 +12,13 @@
   
 - name: Updating system
   meta: flush_handlers
+
+- name: (Re)Installing Arch Linux Keyring
+  shell: pacman -S --noconfirm archlinux-keyring
+
+- name: Keyring initialization
+  shell: pacman-key --init
+
+- name: Upgrading system
+  community.general.pacman:
+    upgrade: true
